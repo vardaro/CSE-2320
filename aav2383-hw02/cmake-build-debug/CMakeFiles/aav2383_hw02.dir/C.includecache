@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anthony/CLionProjects/aav2383-hw02/hw02-lib.h
+
+/home/anthony/CLionProjects/aav2383-hw02/hw02.c
+stdio.h
+-
+hw02-lib.h
+/home/anthony/CLionProjects/aav2383-hw02/hw02-lib.h
+
