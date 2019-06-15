@@ -15,6 +15,7 @@ struct Unit {
 
 /**
  * Sorts an array via insertion sort
+ * we also track number of executions of the while loop condition
  * @param arr array to sort
  * @param n length of array
  */
@@ -96,7 +97,6 @@ int main() {
     // compute averages
     printf("\navg number of experiments = %.1f\n", getRealAvg(testCases, 5));
     printf("        predicted average = %.1f\n", getPredictedAvg(100));
-
 
     return 0;
 }

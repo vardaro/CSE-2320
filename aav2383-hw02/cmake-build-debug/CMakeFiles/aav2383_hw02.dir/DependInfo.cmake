@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/anthony/CLionProjects/aav2383-hw02/hw02.c" "/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/CMakeFiles/aav2383_hw02.dir/hw02.c.o"
+  "/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/hw02.c" "/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/CMakeFiles/aav2383_hw02.dir/hw02.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

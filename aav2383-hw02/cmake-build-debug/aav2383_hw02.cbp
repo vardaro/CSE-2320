@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug"/>
+				<Option working_dir="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug"/>
+				<Option working_dir="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="aav2383_hw02">
-				<Option output="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/aav2383_hw02" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug"/>
+				<Option output="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/aav2383_hw02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 aav2383_hw02"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 aav2383_hw02"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="aav2383_hw02/fast">
-				<Option output="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/aav2383_hw02" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug"/>
+				<Option output="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/aav2383_hw02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,33 +61,33 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 aav2383_hw02/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 aav2383_hw02/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug"/>
+				<Option working_dir="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/CLionProjects/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/anthony/CLionProjects/aav2383-hw02/hw02-lib.h">
+		<Unit filename="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/hw02-lib.h">
 			<Option target="aav2383_hw02"/>
 		</Unit>
-		<Unit filename="/home/anthony/CLionProjects/aav2383-hw02/hw02-lib.o">
+		<Unit filename="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/hw02-lib.o">
 			<Option target="aav2383_hw02"/>
 		</Unit>
-		<Unit filename="/home/anthony/CLionProjects/aav2383-hw02/hw02.c">
+		<Unit filename="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/hw02.c">
 			<Option target="aav2383_hw02"/>
 		</Unit>
-		<Unit filename="/home/anthony/CLionProjects/aav2383-hw02/CMakeLists.txt">
+		<Unit filename="/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw02/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
