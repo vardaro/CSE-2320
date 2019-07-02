@@ -7,7 +7,6 @@
 struct TestCase {
     int arraySize;
     int multiplier;
-    int * hashCounts;
 };
 
 
@@ -52,6 +51,21 @@ char ** computeHashStrings(int numStr) {
 }
 
 /**
+ * formats a struct TestCase into output
+ * @param cur struct TestCase to print
+ */
+void printResults(struct TestCase * cur, int * temp) {
+    int i;
+    printf("size = %d, mult = %d: ", cur->arraySize, cur->multiplier);
+    for (i = 0; i < cur->arraySize; ++i) {
+        if (i+1 == cur->arraySize)
+            printf("%d\n", *(temp + i));
+        else
+            printf("%d, ", *(temp + i));
+    }
+    printf("\n");
+}
+/**
  * Loop through each string to hash,
  * find the index in which it would be stored using hash()
  * dereference the hashCounts array at the index, and increment it.
@@ -61,32 +75,17 @@ char ** computeHashStrings(int numStr) {
  */
 void computeBinCounts(char ** strs, int numStr, struct TestCase * cur) {
     int i;
-    cur->hashCounts = (int *)malloc(cur->arraySize * sizeof(int *));
+    int *temp = (int *)malloc(cur->arraySize * sizeof(int));
+    memset(temp, 0, cur->arraySize * sizeof(*temp));
     for (i = 0; i < numStr; i++) {
         int index = hash(strs[i], cur->arraySize, cur->multiplier);
 
-        int binCount = *(cur->hashCounts + index) + 1;
-        *(cur->hashCounts + index) = binCount;
-
+        int binCount = *(temp + index) + 1;
+        *(temp + index) = binCount;
     }
+    printResults(cur, temp);
+    free(temp);
 }
-
-/**
- * formats a struct TestCase into output
- * @param cur struct TestCase to print
- */
-void printResults(struct TestCase * cur) {
-    int i;
-    printf("size = %d, mult = %d: ", cur->arraySize, cur->multiplier);
-    for (i = 0; i < cur->arraySize; ++i) {
-        if (i+1 == cur->arraySize)
-            printf("%d\n", *(cur->hashCounts + i));
-        else
-            printf("%d, ", *(cur->hashCounts + i));
-    }
-    printf("\n");
-}
-
 /**
  * Frees memory allocated by computeHashStrings()
  *
@@ -104,7 +103,6 @@ int main() {
     int numStr = (int) pow(26, 3);
     char ** strs = computeHashStrings(numStr);
     int i, len;
-
     struct TestCase testCases[4] = {
             {123,10},
             {123,31},
@@ -118,13 +116,8 @@ int main() {
        compute number of collisions at each index for current iteration
        print the results and free the cur.hashCounts ptr;
     */
-    for (i = 0; i < len; i++) {
-        struct TestCase * cur = &testCases[i];
-        computeBinCounts(strs, numStr, cur);
-        printResults(cur);
-        free(cur->hashCounts);
-    }
-
+    for (i = 0; i < len; i++)
+        computeBinCounts(strs, numStr, &testCases[i]);
     freeHashStrings(strs);
 
     return 0;

@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aa1e277-8fff-43fb-ad69-9cb5f23f9dc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/aav2383_hw03.dir/hw03.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hw03.c" beforeDir="false" afterPath="$PROJECT_DIR$/hw03.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -35,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw03.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+            <state relative-caret-position="199">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
               <folding>
                 <element signature="e#33#51#0" expanded="true" />
               </folding>
@@ -141,12 +142,12 @@
       <updated>1561749921171</updated>
       <workItem from="1561749922838" duration="9802000" />
       <workItem from="1561952340861" duration="10252000" />
-      <workItem from="1562034199603" duration="1250000" />
+      <workItem from="1562034199603" duration="6783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21304000" />
+    <option name="totallyTimeSpent" value="26837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1055" extended-state="4" />
@@ -158,9 +159,9 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3275862" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935413" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39870688" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3275862" />
@@ -177,22 +178,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/hw03.c</url>
-          <line>127</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/hw03.c</url>
-          <line>124</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -206,8 +191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw03.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        <state relative-caret-position="199">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
           <folding>
             <element signature="e#33#51#0" expanded="true" />
           </folding>
