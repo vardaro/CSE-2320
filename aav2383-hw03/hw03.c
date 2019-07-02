@@ -1,4 +1,4 @@
-// Anthony Vardaro 1001522383
+/* Anthony Vardaro 1001522383 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -23,11 +23,11 @@ int hash(char s[], int size, int m) {
  */
 char ** computeHashStrings(int numStr) {
     char **strs = malloc(numStr * sizeof(char *));
+    char x, y, z;
+    int i = 0;
 
     if (strs == NULL) return strs;
 
-    char x, y, z;
-    int i = 0;
     for (x = 'a'; x <= 'z'; x++) {
         for (y = 'a'; y <= 'z'; y++) {
             for (z = 'a'; z <= 'z'; z++) {
@@ -42,7 +42,7 @@ char ** computeHashStrings(int numStr) {
 
                 strcpy(strs[i], cur);
 
-                i++; // by the end of this function, i = 26^3 = numStr
+                i++; /* by the end of this function, i = 26^3 = numStr */
 
             }
         }
@@ -76,8 +76,8 @@ void computeBinCounts(char ** strs, int numStr, struct TestCase * cur) {
  * @param cur struct TestCase to print
  */
 void printResults(struct TestCase * cur) {
-    printf("size = %d, mult = %d: ", cur->arraySize, cur->multiplier);
     int i;
+    printf("size = %d, mult = %d: ", cur->arraySize, cur->multiplier);
     for (i = 0; i < cur->arraySize; ++i) {
         if (i+1 == cur->arraySize)
             printf("%d\n", *(cur->hashCounts + i));
@@ -103,18 +103,21 @@ void freeHashStrings(char ** hashStrings) {
 int main() {
     int numStr = (int) pow(26, 3);
     char ** strs = computeHashStrings(numStr);
-    struct TestCase testCases[4];
-    testCases[0] = (struct TestCase){.arraySize = 123, .multiplier = 10};
-    testCases[1] = (struct TestCase){.arraySize = 123, .multiplier = 31};
-    testCases[2] = (struct TestCase){.arraySize = 124, .multiplier = 10};
-    testCases[3] = (struct TestCase){.arraySize = 124, .multiplier = 31};
+    int i, len;
 
-    int i;
-    int len = sizeof(testCases) / sizeof(struct TestCase);
+    struct TestCase testCases[4] = {
+            {123,10},
+            {123,31},
+            {124,10},
+            {124,31}
+    };
 
-    // loop through each test case
-    // compute number of collisions at each index for current iteration
-    // print the results and free the cur.hashCounts ptr;
+    len = sizeof(testCases) / sizeof(struct TestCase);
+
+    /* loop through each test case
+       compute number of collisions at each index for current iteration
+       print the results and free the cur.hashCounts ptr;
+    */
     for (i = 0; i < len; i++) {
         struct TestCase * cur = &testCases[i];
         computeBinCounts(strs, numStr, cur);
