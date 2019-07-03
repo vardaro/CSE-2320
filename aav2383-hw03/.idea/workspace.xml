@@ -11,10 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3aa1e277-8fff-43fb-ad69-9cb5f23f9dc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/aav2383_hw03.dir/hw03.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw03.c" beforeDir="false" afterPath="$PROJECT_DIR$/hw03.c" afterDir="false" />
-    </list>
+    <list default="true" id="3aa1e277-8fff-43fb-ad69-9cb5f23f9dc6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw03.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="287">
+              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
               <folding>
                 <element signature="e#33#51#0" expanded="true" />
               </folding>
@@ -142,12 +139,12 @@
       <updated>1561749921171</updated>
       <workItem from="1561749922838" duration="9802000" />
       <workItem from="1561952340861" duration="10252000" />
-      <workItem from="1562034199603" duration="6783000" />
+      <workItem from="1562034199603" duration="8335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26837000" />
+    <option name="totallyTimeSpent" value="28389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1055" extended-state="4" />
@@ -191,8 +188,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw03.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="287">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
           <folding>
             <element signature="e#33#51#0" expanded="true" />
           </folding>
