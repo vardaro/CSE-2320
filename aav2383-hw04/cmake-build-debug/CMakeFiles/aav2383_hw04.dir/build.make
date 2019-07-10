@@ -57,27 +57,27 @@ include CMakeFiles/aav2383_hw04.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/aav2383_hw04.dir/flags.make
 
-CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o: CMakeFiles/aav2383_hw04.dir/flags.make
-CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o: ../hw04-queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o   -c /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-queue.c
+CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o: CMakeFiles/aav2383_hw04.dir/flags.make
+CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o: ../hw04-tree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o   -c /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-tree.c
 
-CMakeFiles/aav2383_hw04.dir/hw04-queue.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aav2383_hw04.dir/hw04-queue.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-queue.c > CMakeFiles/aav2383_hw04.dir/hw04-queue.c.i
+CMakeFiles/aav2383_hw04.dir/hw04-tree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aav2383_hw04.dir/hw04-tree.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-tree.c > CMakeFiles/aav2383_hw04.dir/hw04-tree.c.i
 
-CMakeFiles/aav2383_hw04.dir/hw04-queue.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aav2383_hw04.dir/hw04-queue.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-queue.c -o CMakeFiles/aav2383_hw04.dir/hw04-queue.c.s
+CMakeFiles/aav2383_hw04.dir/hw04-tree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aav2383_hw04.dir/hw04-tree.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/hw04-tree.c -o CMakeFiles/aav2383_hw04.dir/hw04-tree.c.s
 
 # Object files for target aav2383_hw04
 aav2383_hw04_OBJECTS = \
-"CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o"
+"CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o"
 
 # External object files for target aav2383_hw04
 aav2383_hw04_EXTERNAL_OBJECTS =
 
-aav2383_hw04: CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o
+aav2383_hw04: CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o
 aav2383_hw04: CMakeFiles/aav2383_hw04.dir/build.make
 aav2383_hw04: CMakeFiles/aav2383_hw04.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable aav2383_hw04"

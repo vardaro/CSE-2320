@@ -123,32 +123,32 @@ aav2383_hw04/fast:
 	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/build
 .PHONY : aav2383_hw04/fast
 
-hw04-queue.o: hw04-queue.c.o
+hw04-tree.o: hw04-tree.c.o
 
-.PHONY : hw04-queue.o
+.PHONY : hw04-tree.o
 
 # target to build an object file
-hw04-queue.c.o:
-	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o
-.PHONY : hw04-queue.c.o
+hw04-tree.c.o:
+	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o
+.PHONY : hw04-tree.c.o
 
-hw04-queue.i: hw04-queue.c.i
+hw04-tree.i: hw04-tree.c.i
 
-.PHONY : hw04-queue.i
+.PHONY : hw04-tree.i
 
 # target to preprocess a source file
-hw04-queue.c.i:
-	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-queue.c.i
-.PHONY : hw04-queue.c.i
+hw04-tree.c.i:
+	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-tree.c.i
+.PHONY : hw04-tree.c.i
 
-hw04-queue.s: hw04-queue.c.s
+hw04-tree.s: hw04-tree.c.s
 
-.PHONY : hw04-queue.s
+.PHONY : hw04-tree.s
 
 # target to generate assembly for a file
-hw04-queue.c.s:
-	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-queue.c.s
-.PHONY : hw04-queue.c.s
+hw04-tree.c.s:
+	$(MAKE) -f CMakeFiles/aav2383_hw04.dir/build.make CMakeFiles/aav2383_hw04.dir/hw04-tree.c.s
+.PHONY : hw04-tree.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... aav2383_hw04"
 	@echo "... edit_cache"
-	@echo "... hw04-queue.o"
-	@echo "... hw04-queue.i"
-	@echo "... hw04-queue.s"
+	@echo "... hw04-tree.o"
+	@echo "... hw04-tree.i"
+	@echo "... hw04-tree.s"
 .PHONY : help
 
 

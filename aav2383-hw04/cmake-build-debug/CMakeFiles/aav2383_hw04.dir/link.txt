@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o  -o aav2383_hw04 
+/usr/bin/cc -g   CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o  -o aav2383_hw04 

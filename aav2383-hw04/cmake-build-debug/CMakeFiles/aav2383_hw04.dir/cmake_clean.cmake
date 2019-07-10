@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/aav2383_hw04.dir/hw04-queue.c.o"
+  "CMakeFiles/aav2383_hw04.dir/hw04-tree.c.o"
   "aav2383_hw04.pdb"
   "aav2383_hw04"
 )
