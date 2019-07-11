@@ -27,7 +27,6 @@ struct Node *balance(char **array, int firstIndex, int lastIndex) {
 
 /**
  * Sorts an array via insertion sort
- * we also track number of executions of the while loop condition
  * @param arr array to sort
  * @param n length of array
  */
@@ -89,18 +88,38 @@ void postorder(struct Node * root) {
     printf("%s ", root->value);
 }
 
+/**
+ * Frees memory allocated for a binary tree via postorder traversal
+ * @param root root node in current iteration
+ */
+void freeBinaryTree(struct Node * root) {
+    if (root == NULL)
+        return;
 
-char **safeRealloc(int size, char **ptr) {
-    char **temp = realloc(ptr, size * sizeof(char *));
+    freeBinaryTree(root->left);
+    freeBinaryTree(root->right);
+    free(root);
+}
+
+/**
+ * Grows a previously allocated string array, by a factor of 2
+ * This function modifies the pointers directly.
+ * @param size int * of current size of the array
+ * @param strings char *** ptr to 2d char array, array to resize
+ */
+void grow(int * size, char *** strings) {
+    char ** temp;
+    *size *= 2;
+    printf("reallocating to %d addresses\n", *size);
+    temp = realloc(*strings, *size * sizeof(char *));
 
     if (temp == NULL) {
         printf("unable to reallocate\n");
-        return ptr;
+        return;
     }
-    return temp;
+    *strings = temp;
 
 }
-
 void freeStringArray(char ** strings, int len) {
     int i;
     for (i = 0; i < len; i++)
@@ -121,7 +140,7 @@ int main() {
     fp = fopen("./data-tree.txt", "r");
 
     if (!fp) {
-        printf("Error opening");
+        printf("error opening\n");
         return 1;
     }
 
@@ -142,11 +161,9 @@ int main() {
         /* terminate the trailing \n on buffer */
         buffer[inputLen - 1] = '\0';
 
-        if (index == size) {
-            size *= 2;
-            printf("reallocating to %d addresses\n", size);
-            strings = safeRealloc(size, strings);
-        }
+        /* if the array is at max capracity, double its size */
+        if (index == size)
+            grow(&size, &strings);
 
         strings[index] = (char *) malloc(inputLen * sizeof(char));
 
@@ -155,6 +172,7 @@ int main() {
 
     }
 
+    /* sort the array, and generate a binary tree with it to print */
     sort(strings, index);
 
     root = (struct Node *) malloc(sizeof(struct Node *));
@@ -168,6 +186,8 @@ int main() {
     printf("\n\npostorder: ");
     postorder(root);
     printf("\n");
+
+    freeBinaryTree(root);
     freeStringArray(strings, index);
 
     return 0;

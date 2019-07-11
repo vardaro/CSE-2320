@@ -52,8 +52,9 @@ void enqueue(struct Queue * q, char * record) {
         return;
     }
 
-    /* traverse the LL to see if the record is already there
-       by the end of the loop, cur = tail, which we can use later in the function.
+    /* traverse the LL to see if the record is already there.
+     *
+     * by the end of the loop, cur = tail, which we can use later in the function.
     */
     cur = q->head;
     while (cur && cur->next != NULL) {
