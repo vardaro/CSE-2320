@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/aav2383_hw05.dir/hw05.c.o  -o aav2383_hw05 
