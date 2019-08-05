@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anthony/Desktop/School/Summer2019/CSE2320/Homework/aav2383-hw07/hw07.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

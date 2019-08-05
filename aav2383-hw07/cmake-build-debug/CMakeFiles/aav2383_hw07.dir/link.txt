@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/aav2383_hw07.dir/hw07.c.o  -o aav2383_hw07 
