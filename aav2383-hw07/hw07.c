@@ -4,6 +4,8 @@
 #include <string.h>
 
 #define COURSE_BUFFER_LEN 100
+#define START_OF_DAY      "08:00"
+
 
 struct class {
     char section[4];
@@ -52,7 +54,15 @@ struct class *newClassFromBuffer(char *buffer) {
 
 }
 
+/**
+ * Dynamically inserts a string into a string array of size size
+ * @param array array to modify
+ * @param str string to insert
+ * @param size size of array
+ */
 void insertString(char ***array, char *str, int size) {
+    /* Grow the array with a temp array, push the new string,
+     * and set array = temp before exiting. */
     char **temp = realloc(*array, size * sizeof(char *));
     if (temp == NULL)
         err("Unable to realloc array");
@@ -62,11 +72,19 @@ void insertString(char ***array, char *str, int size) {
     *array = temp;
 }
 
+/**
+ * Dynamically inserts a struct class into a struct class array of size size.
+ * @param array array to modify
+ * @param c struct class to insert
+ * @param size size of class array
+ */
 void insertClass(struct class **array, struct class *c, int size) {
+    /* Reallocate the array using a temp array.
+     * modify the temp array and set the original array = temp. */
     struct class *temp = realloc(*array, size * sizeof(struct class));
     if (temp == NULL)
         err("Unable to realloc array");
-//    new = newClassFromBuffer(buffer);
+
     /* set the order of placement for this instance */
     c->order = size;
 
@@ -76,7 +94,7 @@ void insertClass(struct class **array, struct class *c, int size) {
 
 /**
  * Returns a bool denoting if the kiddo can take the class
- * @param eligible string array of class the student can take.
+ * @param eligible string array of classes the student can take.
  * @param classBuffer raw buffer from courses csv file. it will parse the buffer in a
  *                    copied string, so the original will not get modified.
  * @param sizeEligible length of the eligible string array (number of strings)
@@ -107,7 +125,10 @@ int classCanBeTaken(char **eligible, char *classBuffer, int sizeEligible) {
     return 0;
 
 }
-
+/**
+ * Prints a struct class
+ * @param c struct class
+ */
 void printClass(struct class *c) {
     if (c == NULL) {
         err("Class object is null");
@@ -186,12 +207,26 @@ void freeArray(void **array, int size) {
         free(array[i]);
     free(array);
 }
-
+/**
+ * Returns a bool denoting whether c can be taken given context.
+ *
+ * @param classes struct class array, containing all the classes the
+ *        student has signed up for.
+ * @param c class the student wishes to apply for.
+ * @param sizeClasses number of classes in array.
+ * @return integer 1 if class has already been taken, 0 if not.
+ */
 int classHasBeenTaken(struct class *classes, struct class *c, int sizeClasses) {
     int i;
     int subject;
     int catalog;
     struct class *cur;
+
+    /*
+     * Loop over all the classes already scheduled
+     * If the current iteration is equal to the potential class to sign up for -
+     * return 1 (to indicate this class is already signed up for)/
+     */
     for (i = 0; i < sizeClasses; i++) {
         cur = &classes[i];
         subject = strcmp(cur->subject, c->subject);
@@ -203,9 +238,20 @@ int classHasBeenTaken(struct class *classes, struct class *c, int sizeClasses) {
     return 0;
 }
 
+/**
+ * Returns a bool denoting whether the class c can be schedule given the calender of the student.
+ * The idea is that if end time of the latest class in the student schedule is less than the
+ * start time of the class we want to add, the class can be easily scheduled.
+ * @param classes array of struct classes
+ * @param c class we want to add
+ * @param sizeClasses number of classes already signed up for.
+ * @return 1 if the student can fit class in schedule, 0 if not.
+ */
 int timeSlotAvailable(struct class *classes, struct class *c, int sizeClasses) {
-    int i;
     struct class * cur;
+
+    /* if the class is before the predefined start of the day return 0*/
+    if (strcmp(START_OF_DAY, c->start) > 0) return 0;
 
     /* if there are no classes, return 1 */
     if (sizeClasses == 0) return 1;
@@ -218,23 +264,7 @@ int timeSlotAvailable(struct class *classes, struct class *c, int sizeClasses) {
     /* check if the end time of the last class, is less than the start time of new class */
     if (strcmp(cur->end, c->start) < 0) return 1;
 
-//    for (i = 0; i < sizeClasses; i++) {
-//        cur = &classes[i];
-//        /* check that the start time of c is after the end time of cur. */
-//        if (strcmp(cur->end, c->start) < 0) return 1;
-//    }
     return 0;
-}
-
-char * lookahead(char * time, int minutes) {
-    char copy[5];
-    int newHour;
-    int newMin;
-    strcpy(copy, time);
-    newHour = atoi(strtok(copy, ":"));
-    newMin = atoi(strtok(NULL, ":"));
-    printf("%d %d\n", newHour, newMin);
-
 }
 
 /**
@@ -247,16 +277,13 @@ char * lookahead(char * time, int minutes) {
  * @return array classes sorted by time.
  */
 struct class *scheduler(struct class *classes, int sizeClasses) {
-    char time[6] = "08:00";
     struct class *schedule = NULL;
     struct class *cur;
     int sizeSchedule = 0;
-    int equality;
     int i;
     /* loop over the classes, select the nearest one relative to the time */
     for (i = 0; i < sizeClasses; i++) {
         cur = &classes[i];
-        equality = strcmp(time, cur->start);
 
         /* if the current class start time is == to our current time,
          * and has not been picked,
@@ -267,13 +294,7 @@ struct class *scheduler(struct class *classes, int sizeClasses) {
 
             sizeSchedule++;
             insertClass(&schedule, cur, sizeSchedule);
-            strcpy(time, cur->end);
 
-        } else {
-//            minute = time[3];
-//            minute++;
-//            time[3] = minute;
-            //lookahead(time, 10);
         }
     }
 
@@ -308,9 +329,6 @@ int main() {
 
     }
 
-    for (i = 0; i < sizeEligible; i++)
-        printf("%s\n", eligible[i]);
-
     /* now read in classes, only include them if eligible. */
     fp = fopen("./fall2019courses.csv", "r");
 
@@ -333,11 +351,6 @@ int main() {
     /* sort the classes array, day of week, then, start time asc, then course name asc */
     qsort(classes, sizeClasses, sizeof(struct class), qsortCallback);
 
-    for (i = 0; i < sizeClasses; i++) {
-        printClass(&classes[i]);
-    }
-
-    printf("\n");
     scheduler(classes, sizeClasses);
 
     freeArray((void *) eligible, sizeEligible);
