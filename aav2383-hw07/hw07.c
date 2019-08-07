@@ -130,11 +130,24 @@ int classCanBeTaken(char **eligible, char *classBuffer, int sizeEligible) {
  * @param c struct class
  */
 void printClass(struct class *c) {
+    char * temp;
     if (c == NULL) {
         err("Class object is null");
     }
-    printf("%s %s %s.%s %s--%s %s %s %s Monday:%s\n", c->start, c->subject, c->catalog, c->section, c->start, c->end,
-           c->building, c->room, c->name, c->mon);
+
+    strcpy(temp, c->building);
+    strcat(temp, " ");
+    strcat(temp, c->room);
+    printf("%s ", c->start);
+    printf("%5s ", c->subject);
+    printf("%s.%s  ", c->catalog, c->section);
+    printf("%s--%s  ", c->start, c->end);
+    printf("%-7s", temp);
+
+    printf("  %s\n", c->name);
+
+/*    printf("%s %5s %s.%s  %s--%s  %s %3s  %s\n", c->start, c->subject, c->catalog, c->section, c->start, c->end,
+          c->building, c->room, c->name); */
 }
 
 /**
@@ -298,10 +311,21 @@ struct class *scheduler(struct class *classes, int sizeClasses) {
         }
     }
 
-    for (i = 0; i < sizeSchedule; i++) {
+
+
+    /* print the array and exit */
+    printf("***  Monday schedule  ***\n");
+    for (i = 0, cur = &schedule[i]; strcmp(schedule[i].mon, "Y") == 0 && i < sizeSchedule; i++) {
+
         printClass(&schedule[i]);
     }
-    return schedule;
+
+    printf("\n***  Tuesday schedule  ***\n");
+    for (;i < sizeSchedule; i++) {
+        printClass(&schedule[i]);
+    }
+
+    free(schedule);
 }
 
 
@@ -311,7 +335,6 @@ int main() {
     char **eligible;
     struct class *classes;
     int sizeEligible = 0, sizeClasses = 0;
-    int i;
 
     fp = fopen("./eligible.txt", "r");
 
