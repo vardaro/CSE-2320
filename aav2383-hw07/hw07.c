@@ -63,7 +63,13 @@ struct class *newClassFromBuffer(char *buffer) {
 void insertString(char ***array, char *str, int size) {
     /* Grow the array with a temp array, push the new string,
      * and set array = temp before exiting. */
-    char **temp = realloc(*array, size * sizeof(char *));
+    char ** temp;
+    if (size == 1) {
+        temp = malloc(sizeof(char*));
+    } else {
+        temp =  realloc(*array, size * sizeof(char *));
+    }
+
     if (temp == NULL)
         err("Unable to realloc array");
     temp[size - 1] = (char *) malloc(strlen(str) * sizeof(char));
@@ -81,7 +87,12 @@ void insertString(char ***array, char *str, int size) {
 void insertClass(struct class **array, struct class *c, int size) {
     /* Reallocate the array using a temp array.
      * modify the temp array and set the original array = temp. */
-    struct class *temp = realloc(*array, size * sizeof(struct class));
+    struct class * temp;
+    if (size == 1) {
+        temp = malloc(sizeof(struct class));
+    } else {
+        temp = realloc(*array, size * sizeof(struct class));
+    }
     if (temp == NULL)
         err("Unable to realloc array");
 
