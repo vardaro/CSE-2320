@@ -141,21 +141,19 @@ int classCanBeTaken(char **eligible, char *classBuffer, int sizeEligible) {
  * @param c struct class
  */
 void printClass(struct class *c) {
-    char * temp;
+    char * tail;
     if (c == NULL) {
         err("Class object is null");
     }
-
-    strcpy(temp, c->building);
-    strcat(temp, " ");
-    strcat(temp, c->room);
+    tail = ((int)strlen(c->building) <= 2) ? " " : "";
     printf("%s ", c->start);
     printf("%5s ", c->subject);
     printf("%s.%s  ", c->catalog, c->section);
     printf("%s--%s  ", c->start, c->end);
-    printf("%-7s", temp);
-
-    printf("  %s\n", c->name);
+    /*printf("%-3s%-2s", c->building, c->room);*/
+    printf("%.*s ", (int)strlen(c->building), c->building);
+    printf("%-3s%s", c->room, tail);
+    printf("  %s\n",c->name);
 
 /*    printf("%s %5s %s.%s  %s--%s  %s %3s  %s\n", c->start, c->subject, c->catalog, c->section, c->start, c->end,
           c->building, c->room, c->name); */
@@ -326,7 +324,7 @@ struct class *scheduler(struct class *classes, int sizeClasses) {
 
     /* print the array and exit */
     printf("***  Monday schedule  ***\n");
-    for (i = 0, cur = &schedule[i]; strcmp(schedule[i].mon, "Y") == 0 && i < sizeSchedule; i++) {
+    for (i = 0; strcmp(schedule[i].mon, "Y") == 0 && i < sizeSchedule; i++) {
 
         printClass(&schedule[i]);
     }
@@ -386,7 +384,7 @@ int main() {
     qsort(classes, sizeClasses, sizeof(struct class), qsortCallback);
 
     scheduler(classes, sizeClasses);
-
+    fclose(fp);
     freeArray((void *) eligible, sizeEligible);
     free(classes);
     return 0;
